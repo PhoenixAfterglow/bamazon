@@ -42,7 +42,7 @@ Having an active and healthy commit history on GitHub is important for your futu
 
 ### Challenge #1: Customer View (Minimum Requirement)
 
-1. Create a MySQL Database called `bamazon`.
+<!-- 1. Create a MySQL Database called `bamazon`.
 
 2. Then create a Table inside of that database called `products`.
 
@@ -56,11 +56,11 @@ Having an active and healthy commit history on GitHub is important for your futu
 
    * price (cost to customer)
 
-   * stock_quantity (how much of the product is available in stores)
+   * stock_quantity (how much of the product is available in stores) -->
 
-4. Populate this database with around 10 different products. (i.e. Insert "mock" data rows into this database and table).
+<!-- 4. Populate this database with around 10 different products. (i.e. Insert "mock" data rows into this database and table). -->
 
-5. Then create a Node application called `bamazonCustomer.js`. Running this application will first display all of the items available for sale. Include the ids, names, and prices of products for sale.
+<!-- 5. Then create a Node application called `bamazonCustomer.js`. Running this application will first display all of the items available for sale. Include the ids, names, and prices of products for sale.
 
 6. The app should then prompt users with two messages.
 
@@ -73,7 +73,7 @@ Having an active and healthy commit history on GitHub is important for your futu
 
 8. However, if your store _does_ have enough of the product, you should fulfill the customer's order.
    * This means updating the SQL database to reflect the remaining quantity.
-   * Once the update goes through, show the customer the total cost of their purchase.
+   * Once the update goes through, show the customer the total cost of their purchase. -->
 
 - - -
 
