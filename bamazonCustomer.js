@@ -86,8 +86,9 @@ function purchaseOrder(ID, amtNeeded){
 		} else{
 			console.log("Low Inventory! Choose a different quantity of " + res[0].product_name + "to complete your order.");
 		};
-		connection.end();
-		// displayProducts();
+		
+		displayProducts();
+		// connection.end();
 	});
 };
 
