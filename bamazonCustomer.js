@@ -23,7 +23,7 @@ const connection = mysql.createConnection({
 connection.connect(function(err) {
   if (err) throw err;
   console.log("connected as id " + connection.threadId + "\n");
-  createProduct();
+  displayProducts();
 });
 
 // MySQL Connection END
@@ -77,13 +77,19 @@ function purchaseOrder(ID, amtNeeded){
 			var totalCost = res[0].price * amtNeeded;
 			console.log("Good news! Your order is in stock!");
 			console.log("Your total cost for " + amtNeeded + " " +res[0].product_name + " is " + totalCost + " Thank you!");
-
-			connection.query("UPDATE products SET stock_quantity = stock_quantity - " + amtNeeded + "WHERE item_id = " + ID);
+			
+			const updateProduct = `UPDATE products SET stock_quantity = stock_quantity - ${amtNeeded} WHERE item_id = ${ID}`;
+			connection.query(updateProduct);
+			// connection.query("UPDATE products SET stock_quantity = stock_quantity - " + amtNeeded + " WHERE item_id = " + ID);
+			// Note to self: need to have space before the W in WHERE.
+			
 		} else{
 			console.log("Low Inventory! Choose a different quantity of " + res[0].product_name + "to complete your order.");
 		};
-		displayProducts();
+		connection.end();
+		// displayProducts();
 	});
 };
 
-displayProducts(); 
+// Note: Shouldn't have this here because it will run this before connecting to MySQL Server.
+// displayProducts(); 
