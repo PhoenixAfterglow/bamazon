@@ -84,7 +84,7 @@ function purchaseOrder(ID, amtNeeded){
 			// Note to self: need to have space before the W in WHERE.
 			
 		} else{
-			console.log("Low Inventory! Choose a different quantity of " + res[0].product_name + "to complete your order.");
+			console.log("Low Inventory! Choose a different quantity of " + res[0].product_name + " to complete your order.");
 		};
 		
 		displayProducts();
