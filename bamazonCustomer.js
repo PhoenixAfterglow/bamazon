@@ -2,6 +2,7 @@
 // =============================================================
 const mysql = require("mysql");
 const inquirer = require("inquirer");
+const dotenv = require("dotenv");
 const Table = require("cli-table");
 
 // MySQL Connection START
